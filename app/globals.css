@@ -1,0 +1,167 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #FBF7F2;
+  --fg: #1A1A1A;
+  --brand: #C4633E;
+  --brand-light: #E89172;
+  --line: #E8E2D8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #F5EFE6;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C4633E, #E89172);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #A04F30, #D58455);
+}
+
+/* Selection */
+::selection {
+  background: rgba(196, 99, 62, 0.25);
+  color: #1A1A1A;
+}
+
+/* Utility classes */
+@layer components {
+  .container-x {
+    @apply max-w-7xl mx-auto px-5 sm:px-8 lg:px-12;
+  }
+
+  .gradient-text {
+    background: linear-gradient(135deg, #C4633E 0%, #E89172 50%, #A04F30 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200% 200%;
+    animation: shimmer 8s ease-in-out infinite;
+  }
+
+  .text-display {
+    @apply font-display tracking-tight;
+  }
+
+  .surface-card {
+    background: #FFFFFF;
+    border: 1px solid #E8E2D8;
+    box-shadow: 0 4px 24px rgba(196, 99, 62, 0.04);
+    transition: all 0.3s ease;
+  }
+  .surface-card:hover {
+    box-shadow: 0 12px 40px rgba(196, 99, 62, 0.10);
+    transform: translateY(-4px);
+  }
+
+  .warm-card {
+    background: linear-gradient(135deg, #FBF2EC 0%, #FFFFFF 100%);
+    border: 1px solid #F0E5D5;
+    transition: all 0.3s ease;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white overflow-hidden transition-all;
+    background: linear-gradient(135deg, #C4633E, #E89172);
+    box-shadow: 0 8px 24px rgba(196, 99, 62, 0.25);
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 32px rgba(196, 99, 62, 0.4);
+  }
+
+  .btn-dark {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-white transition-all;
+    background: #1A1A1A;
+  }
+  .btn-dark:hover {
+    background: #2D2D2D;
+    transform: translateY(-2px);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full font-semibold text-foreground border border-line hover:border-brand-500 transition-all bg-white;
+  }
+  .btn-ghost:hover {
+    background: #FBF2EC;
+    color: #C4633E;
+  }
+
+  .chip {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium border border-line bg-white text-foreground;
+  }
+
+  .chip-warm {
+    @apply inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium;
+    background: #FBF2EC;
+    border: 1px solid #F0E5D5;
+    color: #A04F30;
+  }
+
+  .grid-bg-light {
+    background-image: linear-gradient(rgba(196, 99, 62, 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(196, 99, 62, 0.05) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+
+  .dotted-bg {
+    background-image: radial-gradient(circle, rgba(196, 99, 62, 0.12) 1px, transparent 1px);
+    background-size: 28px 28px;
+  }
+
+  .section-light {
+    background: #FFFFFF;
+  }
+
+  .section-cream {
+    background: #FBF7F2;
+  }
+
+  .section-warm {
+    background: linear-gradient(135deg, #FBF2EC 0%, #FFFFFF 100%);
+  }
+}
+
+/* Hide expensive background animations while portal overlay is active */
+body.portal-open .bg-fx {
+  display: none !important;
+}
+body.portal-open {
+  overflow: hidden;
+}
+
+/* Reduce motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
