@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { services } from "@/lib/data";
+import { getServiceSlug } from "@/lib/serviceSeo";
 import SectionHeader from "./SectionHeader";
 import { ArrowUpRight, Check } from "lucide-react";
 
@@ -79,7 +80,7 @@ export default function Services() {
                   </ul>
 
                   <a
-                    href="#contact"
+                    href={`/services/${getServiceSlug(s.title) ?? ""}`}
                     className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-600 group/link"
                   >
                     Learn more

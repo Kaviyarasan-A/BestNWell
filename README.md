@@ -1,6 +1,6 @@
-# Best N Well — Portfolio Website
+# Kaagam Software Solutions — Company Website
 
-A modern, animated portfolio website for Best N Well IT Solutions.
+A modern, animated marketing website for Kaagam Software Solutions, an IT & software development company.
 
 ## Tech Stack
 - Next.js 14 (App Router)
@@ -72,9 +72,19 @@ bestnwell/
 - **Static export**: add `output: "export"` to `next.config.js` if you want plain HTML for shared hosting (note: this disables some features like dynamic routes)
 
 ## Brand
-- Name: **Best N Well**
-- Email: info@catchuhealthcare.com
+- Name: **Kaagam Software Solutions**
+- Email: elavarasanp1410@gmail.com
+- Phone / WhatsApp: +91 63831 56320
 - Tagline: "We build modern websites, mobile apps, e-commerce & AI solutions that drive growth."
+- Logo: `app/icon.svg` (favicon) and `public/logo.svg` (lockup). To use the exact brand artwork, drop your PNG at `public/logo.png` and swap the `<LogoMark>` for an `<img src="/logo.png">` in `components/Logo.tsx`.
+
+## SEO
+
+- Per-page metadata, OpenGraph & Twitter cards live in `app/layout.tsx`.
+- `ProfessionalService` JSON-LD structured data is injected in `app/layout.tsx`.
+- `app/sitemap.ts`, `app/robots.ts` and `app/manifest.ts` generate `/sitemap.xml`, `/robots.txt` and the web manifest.
+- Social share image is generated at build by `app/opengraph-image.tsx`; favicon is `app/icon.svg`, Apple touch icon `app/apple-icon.tsx`.
+- Set the production domain via the `NEXT_PUBLIC_SITE_URL` env var (defaults to `https://kaagamsoftware.com`).
 
 ---
 

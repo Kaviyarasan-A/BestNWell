@@ -136,7 +136,7 @@ export default function AIEstimator() {
     }).format(n);
 
   const whatsappBudgetMsg = encodeURIComponent(
-    `Hi Best N Well, I used your AI estimator and got an estimate of ${formatINR(
+    `Hi Kaagam Software Solutions, I used your AI estimator and got an estimate of ${formatINR(
       estimate.low
     )} - ${formatINR(estimate.high)}. I'd like to discuss my project.`
   );

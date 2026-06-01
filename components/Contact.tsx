@@ -26,7 +26,7 @@ export default function Contact() {
     const message = fd.get("message") as string;
 
     const text = encodeURIComponent(
-      `Hi Best N Well,\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`
+      `Hi Kaagam Software Solutions,\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nService: ${service}\n\n${message}`
     );
 
     setTimeout(() => {
@@ -95,9 +95,15 @@ export default function Contact() {
                   <div className="text-xs text-muted uppercase tracking-wider">Email us</div>
                   <a
                     href={`mailto:${company.email}`}
-                    className="font-semibold text-foreground hover:text-brand-600 transition-colors break-all"
+                    className="block font-semibold text-foreground hover:text-brand-600 transition-colors break-all"
                   >
                     {company.email}
+                  </a>
+                  <a
+                    href={`mailto:${company.emailSecondary}`}
+                    className="block font-semibold text-foreground hover:text-brand-600 transition-colors break-all"
+                  >
+                    {company.emailSecondary}
                   </a>
                   <div className="text-sm text-muted mt-1">Avg. response in 2–4 hours</div>
                 </div>

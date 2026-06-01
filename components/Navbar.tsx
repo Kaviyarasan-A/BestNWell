@@ -2,8 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Menu, X, Sparkles } from "lucide-react";
-import { navLinks } from "@/lib/data";
+import { Menu, X } from "lucide-react";
+import { navLinks, company } from "@/lib/data";
+import { Logo } from "./Logo";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -28,15 +29,8 @@ export default function Navbar() {
       }`}
     >
       <div className="container-x flex items-center justify-between h-16 md:h-20">
-        <a href="#home" className="flex items-center gap-2 group">
-          <div className="relative">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-orange flex items-center justify-center shadow-warm group-hover:scale-110 transition-transform">
-              <Sparkles className="w-5 h-5 text-white" />
-            </div>
-          </div>
-          <div className="font-display font-bold text-lg tracking-tight text-foreground">
-            Best <span className="gradient-text">N</span> Well
-          </div>
+        <a href="/" aria-label={`${company.name} — home`}>
+          <Logo tone="light" />
         </a>
 
         <nav className="hidden md:flex items-center gap-1">
@@ -53,7 +47,7 @@ export default function Navbar() {
         </nav>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="#contact" className="btn-primary text-sm">
+          <a href="/#contact" className="btn-primary text-sm">
             Get a Quote
           </a>
         </div>
@@ -88,7 +82,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="btn-primary mt-2 justify-center"
               >

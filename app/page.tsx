@@ -15,10 +15,47 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { company, faqs, services } from "@/lib/data";
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || company.url;
+
+const homeJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "FAQPage",
+      "@id": `${siteUrl}/#faq`,
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    },
+    {
+      "@type": "Service",
+      "@id": `${siteUrl}/#services`,
+      serviceType: "IT & Software Development Services",
+      provider: { "@id": `${siteUrl}/#organization` },
+      areaServed: ["Tamil Nadu", "Coimbatore", "Palani", "India"],
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "Software & IT Services",
+        itemListElement: services.map((s) => ({
+          "@type": "Offer",
+          itemOffered: { "@type": "Service", name: s.title, description: s.short },
+        })),
+      },
+    },
+  ],
+};
 
 export default function HomePage() {
   return (
     <main className="relative">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(homeJsonLd) }}
+      />
       <Navbar />
       <Hero />
       <About />

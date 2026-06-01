@@ -70,7 +70,7 @@ export default function About() {
             {/* Top content over diagonal */}
             <div className="absolute top-8 left-8 right-8 text-white max-w-[60%]">
               <div className="text-xs uppercase tracking-wider font-mono mb-3 text-white/70">
-                // Best N Well · 2026
+                // Kaagam Software Solutions · 2026
               </div>
               <div className="font-display text-2xl sm:text-3xl font-bold leading-tight">
                 Engineering products that <br />
@@ -116,7 +116,7 @@ export default function About() {
         <div className="lg:col-span-7">
           <SectionHeader
             align="left"
-            eyebrow="About Best N Well"
+            eyebrow="About Kaagam Software Solutions"
             title={
               <>
                 A modern IT studio that turns ideas into{" "}

@@ -35,7 +35,6 @@ export default function Portfolio() {
                 whileHover={{ y: -6 }}
                 className="group relative rounded-3xl overflow-hidden surface-card"
               >
-                {/* @ts-expect-error union types */}
                 <Wrapper {...wrapperProps} className="block">
                   <div
                     className="relative h-52 overflow-hidden"

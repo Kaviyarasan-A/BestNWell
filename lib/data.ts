@@ -19,14 +19,22 @@ import {
 } from "lucide-react";
 
 export const company = {
-  name: "Best N Well",
-  tagline: "Modern IT Solutions",
-  email: "kaviyarasanaruchamy@gmail.com",
-  phone: "+91 9585680636",
+  name: "Kaagam Software Solutions",
+  // Brand lockup: primary word + smaller suffix line (the leading letter is
+  // highlighted to echo the "K" bird mark in the logo).
+  brand: "Kaagam",
+  brandSuffix: "Software Solutions",
+  slug: "kaagam",
+  domain: "kaagamsoftware.com",
+  url: "https://kaagamsoftware.com",
+  tagline: "Software, Web, Mobile & AI Solutions",
+  email: "elavarasanp1410@gmail.com",
+  emailSecondary: "kaviyarasanaruchamy@gmail.com",
+  phone: "+91 95856 80636",
   phoneRaw: "919585680636",
   whatsapp: "919585680636",
   whatsappMessage:
-    "Hi Best N Well, I'd like to discuss a project with your team.",
+    "Hi Kaagam Software Solutions, I'd like to discuss a project with your team.",
   location: "Tamil Nadu, India",
 };
 
@@ -388,7 +396,7 @@ export const testimonials = [
     name: "Trip With Uz Team",
     role: "Travel Platform",
     quote:
-      "Best N Well took our travel platform from concept to a live, production-ready product. Their attention to detail and modern stack choices set us up for serious scale.",
+      "Kaagam Software Solutions took our travel platform from concept to a live, production-ready product. Their attention to detail and modern stack choices set us up for serious scale.",
   },
   {
     name: "Mobile App Client",
@@ -436,10 +444,11 @@ export const faqs = [
 ];
 
 export const navLinks = [
-  { href: "#home", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#services", label: "Services" },
-  { href: "#ai", label: "AI" },
-  { href: "#portfolio", label: "Work" },
-  { href: "#contact", label: "Contact" },
+  { href: "/#home", label: "Home" },
+  { href: "/#about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/#ai", label: "AI" },
+  { href: "/#portfolio", label: "Work" },
+  { href: "/blog", label: "Blog" },
+  { href: "/#contact", label: "Contact" },
 ];

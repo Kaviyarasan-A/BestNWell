@@ -19,7 +19,7 @@ const COLORS = {
 };
 
 const PROGRAM: Line[] = [
-  { tokens: [{ text: "// Best N Well · build pipeline", color: COLORS.comment }] },
+  { tokens: [{ text: "// Kaagam Software Solutions · build pipeline", color: COLORS.comment }] },
   { tokens: [{ text: "" }] },
   {
     tokens: [
@@ -27,7 +27,7 @@ const PROGRAM: Line[] = [
       { text: " { ship } ", color: COLORS.base },
       { text: "from", color: COLORS.keyword },
       { text: " '", color: COLORS.string },
-      { text: "@bestnwell/core", color: COLORS.string },
+      { text: "@kaagam/core", color: COLORS.string },
       { text: "'", color: COLORS.string },
     ],
   },
@@ -204,7 +204,7 @@ export default function AnimatedCodeEditor() {
           <span className="w-3 h-3 rounded-full bg-[#28c840]" />
         </div>
         <div className="text-[11px] font-mono text-white/50">
-          build.ts — best-n-well
+          build.ts — kaagam
         </div>
         <div className="text-[10px] font-mono text-emerald-400 flex items-center gap-1.5">
           <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />

@@ -17,9 +17,9 @@ type Line = {
 };
 
 const BOOT: Line[] = [
-  { text: "$ init bestnwell.portfolio --mode=cinematic", delay: 0, color: "white" },
+  { text: "$ init kaagam.portfolio --mode=cinematic", delay: 0, color: "white" },
   { text: "→ connecting to git repository", delay: 500, color: "muted" },
-  { text: "✓ authenticated as best-n-well", delay: 700, color: "emerald" },
+  { text: "✓ authenticated as kaagam", delay: 700, color: "emerald" },
   { text: "→ fetching production projects", delay: 550, color: "muted" },
   { text: "✓ tripwithuz.com · production · live", delay: 700, color: "emerald" },
   { text: "✓ mobile apps · ios + android · 5 shipped", delay: 650, color: "emerald" },
@@ -256,7 +256,7 @@ export default function PortfolioPortal({ open, onClose, onComplete }: Props) {
           {/* Top corner labels */}
           <div className="absolute top-5 left-5 z-10 flex items-center gap-2 text-[10px] font-mono text-brand-300 uppercase tracking-wider">
             <Code2 className="w-3.5 h-3.5" />
-            <span>best-n-well · portfolio</span>
+            <span>kaagam · portfolio</span>
             <span className="ml-2 inline-flex items-center gap-1">
               <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
               <span className="text-emerald-400">live</span>

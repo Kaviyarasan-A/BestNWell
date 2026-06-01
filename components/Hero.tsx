@@ -93,7 +93,7 @@ export default function Hero() {
             transition={{ duration: 0.7, delay: 0.25 }}
             className="mt-6 text-lg text-muted max-w-xl leading-relaxed"
           >
-            Best N Well is a full-stack IT studio designing, developing, publishing,
+            Kaagam Software Solutions is a full-stack IT studio designing, developing, publishing,
             monitoring and supporting digital products. From concept to launch — with
             AI integrated into everything we build.
           </motion.p>
@@ -169,7 +169,7 @@ function HeroVisual() {
           <span className="w-2.5 h-2.5 rounded-full bg-amber-400" />
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400" />
           <div className="ml-3 flex-1 h-6 rounded-md bg-background border border-line flex items-center px-3">
-            <span className="text-[10px] font-mono text-muted">bestnwell.com</span>
+            <span className="text-[10px] font-mono text-muted">kaagamsoftware.com</span>
           </div>
         </div>
 
@@ -221,7 +221,7 @@ function HeroVisual() {
             </div>
           </div>
           <div className="text-white text-[10px] uppercase tracking-wider font-bold mb-1">
-            Best N Well
+            Kaagam
           </div>
           <div className="text-white text-lg font-bold mb-3 leading-tight">
             AI-Powered <br /> Mobile App

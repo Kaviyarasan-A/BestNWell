@@ -10,7 +10,7 @@ export default function WhyUs() {
     <section className="relative py-24 lg:py-32 section-light">
       <div className="container-x">
         <SectionHeader
-          eyebrow="Why Best N Well"
+          eyebrow="Why Kaagam Software Solutions"
           title={
             <>
               Reasons clients <span className="gradient-text">keep coming back</span>

@@ -1,30 +1,31 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Sparkles, Instagram, Linkedin, Twitter, Mail, Phone } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Mail, Phone } from "lucide-react";
 import { company } from "@/lib/data";
+import { Logo } from "./Logo";
 
 const footerLinks = {
   Company: [
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#services" },
-    { label: "AI Solutions", href: "#ai" },
-    { label: "Process", href: "#process" },
-    { label: "Portfolio", href: "#portfolio" },
+    { label: "About", href: "/#about" },
+    { label: "All Services", href: "/services" },
+    { label: "AI Solutions", href: "/#ai" },
+    { label: "Process", href: "/#process" },
+    { label: "Portfolio", href: "/#portfolio" },
   ],
   Services: [
-    { label: "Web Development", href: "#services" },
-    { label: "Mobile Apps", href: "#services" },
-    { label: "E-commerce", href: "#services" },
-    { label: "AI Integration", href: "#ai" },
-    { label: "Cloud & DevOps", href: "#services" },
-    { label: "Monitoring & Support", href: "#services" },
+    { label: "Web Development", href: "/services/web-development" },
+    { label: "Mobile App Development", href: "/services/mobile-app-development" },
+    { label: "E-commerce", href: "/services/ecommerce-development" },
+    { label: "AI Development", href: "/services/ai-development" },
+    { label: "Cloud & DevOps", href: "/services/cloud-devops" },
+    { label: "SEO & Marketing", href: "/services/seo-digital-marketing" },
   ],
   Resources: [
-    { label: "FAQ", href: "#faq" },
-    { label: "Privacy Policy", href: "#" },
-    { label: "Terms of Service", href: "#" },
-    { label: "Careers", href: "#" },
+    { label: "Blog", href: "/blog" },
+    { label: "FAQ", href: "/#faq" },
+    { label: "Contact", href: "/#contact" },
+    { label: "Get a Quote", href: "/#contact" },
   ],
 };
 
@@ -84,7 +85,7 @@ export default function Footer() {
                 <WhatsAppIcon className="w-4 h-4" /> Chat on WhatsApp
               </a>
               <a
-                href="#contact"
+                href="/#contact"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold border border-white/30 text-white hover:bg-white/10 transition-colors"
               >
                 Start a Project
@@ -96,13 +97,8 @@ export default function Footer() {
         {/* Links grid */}
         <div className="grid md:grid-cols-12 gap-10 mb-12">
           <div className="md:col-span-4 space-y-4">
-            <a href="#home" className="flex items-center gap-2 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-brand-500 to-accent-orange flex items-center justify-center shadow-warm">
-                <Sparkles className="w-5 h-5 text-white" />
-              </div>
-              <div className="font-display font-bold text-lg text-white">
-                Best <span className="bg-gradient-to-r from-brand-300 to-accent-gold bg-clip-text text-transparent">N</span> Well
-              </div>
+            <a href="/" aria-label={`${company.name} — home`}>
+              <Logo tone="dark" />
             </a>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
               A modern IT studio designing, developing, publishing, monitoring and
@@ -115,6 +111,12 @@ export default function Footer() {
                 className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-300 transition-colors break-all"
               >
                 <Mail className="w-4 h-4 shrink-0" /> {company.email}
+              </a>
+              <a
+                href={`mailto:${company.emailSecondary}`}
+                className="flex items-center gap-2 text-sm text-white/70 hover:text-brand-300 transition-colors break-all"
+              >
+                <Mail className="w-4 h-4 shrink-0" /> {company.emailSecondary}
               </a>
               <a
                 href={`tel:+${company.phoneRaw}`}
@@ -181,7 +183,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-white/50">
-          <p>© {new Date().getFullYear()} Best N Well. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
           <p>
             Crafted with <span className="text-brand-300">♥</span> in Tamil Nadu, India
           </p>

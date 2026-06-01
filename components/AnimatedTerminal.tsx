@@ -10,7 +10,7 @@ type Step =
   | { kind: "done"; text: string; delay?: number };
 
 const SCRIPT: Step[] = [
-  { kind: "cmd", text: "npm create bestnwell my-app" },
+  { kind: "cmd", text: "npm create kaagam my-app" },
   { kind: "out", text: "→ Discovering scope...", delay: 300 },
   { kind: "done", text: "✓ Architecture designed", delay: 500 },
   { kind: "done", text: "✓ Modern UI built", delay: 500 },
